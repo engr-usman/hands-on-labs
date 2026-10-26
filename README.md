@@ -1,4 +1,4 @@
-# ☁️ Cloud DevOps Labs
+# ☁️ Hands-on Labs
 
 Hands-on **AWS, DevOps and AI labs** from my talks, bootcamps and trainings.
 Every lab has a step-by-step guide, ready-to-run code and cleanup steps, so you can follow along during a session or practise on your own afterwards.
@@ -48,7 +48,7 @@ Coming in future sessions. ⭐ **Star** or 👁️ **Watch** this repo to get no
 ## 📁 Repository structure
 
 ```
-cloud-devops-labs/
+hands-on-labs/
 ├── getting-started/      # One-time setup: AWS account, MFA, budget, CLI
 ├── labs/                 # Reusable hands-on labs, grouped by topic
 │   ├── aws/

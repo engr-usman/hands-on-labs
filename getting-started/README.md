@@ -31,8 +31,8 @@ Close to Pakistan: **Middle East (UAE) `me-central-1`**, **Middle East (Bahrain)
 ## 5. Get the code
 
 ```bash
-git clone https://github.com/[your-username]/cloud-devops-labs.git
-cd cloud-devops-labs
+git clone https://github.com/engr-usman/hands-on-labs.git
+cd hands-on-labs
 ```
 
 No Git? Click the green **Code** button on GitHub → **Download ZIP**.
