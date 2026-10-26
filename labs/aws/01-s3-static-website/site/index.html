@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello from Amazon S3 👋</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <p class="eyebrow">Career Discovery Bootcamp · Superior ACM Society</p>
+    <h1>Hello from <span>Amazon S3</span> 👋</h1>
+    <p class="lead">You are reading a website that has <strong>no server</strong>. These files live in an S3 bucket, and AWS serves them to your phone.</p>
+  </header>
+
+  <main>
+    <section class="cards">
+      <article class="card">
+        <div class="icon">💻</div>
+        <h2>1. Built on a laptop</h2>
+        <p>Three plain files: <code>index.html</code>, <code>style.css</code> and <code>error.html</code>.</p>
+      </article>
+      <article class="card">
+        <div class="icon">🪣</div>
+        <h2>2. Uploaded to a bucket</h2>
+        <p>One command: <code>aws s3 sync ./site s3://my-bucket</code></p>
+      </article>
+      <article class="card">
+        <div class="icon">📱</div>
+        <h2>3. Opened on your phone</h2>
+        <p>Static website hosting turns the bucket into a web address. No Linux, no patching, no server bill.</p>
+      </article>
+    </section>
+
+    <section class="quiz">
+      <h2>Quick check 🎯</h2>
+      <p class="muted">Tap an answer. No one is grading you. Probably.</p>
+
+      <div class="question" data-answer="b">
+        <p class="q">What kind of storage is Amazon S3?</p>
+        <button data-option="a">Block storage (a hard disk)</button>
+        <button data-option="b">Object storage (files + metadata)</button>
+        <button data-option="c">A database</button>
+        <p class="feedback"></p>
+      </div>
+
+      <div class="question" data-answer="a">
+        <p class="q">Who keeps this page’s server patched?</p>
+        <button data-option="a">Nobody needs to. There is no server for me to manage.</button>
+        <button data-option="b">The ACM Society, every night</button>
+        <button data-option="c">Me, after this session</button>
+        <p class="feedback"></p>
+      </div>
+
+      <div class="question" data-answer="c">
+        <p class="q">For a real production site, what would you put in front of this bucket?</p>
+        <button data-option="a">A USB drive</button>
+        <button data-option="b">Another bucket</button>
+        <button data-option="c">Amazon CloudFront (CDN + HTTPS)</button>
+        <p class="feedback"></p>
+      </div>
+    </section>
+
+    <section class="next">
+      <h2>Your turn 🚀</h2>
+      <p>Grab this exact code from GitHub, change the text to your own name and projects, and host your portfolio on S3 this week.</p>
+      <p class="muted">Tip: try opening <a href="does-not-exist.html">a page that doesn’t exist</a> to see the custom error page.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Deployed live at Superior University, Gold Campus · Cloud Computing on AWS with Syed Usman Ahmad</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.question').forEach(function (q) {
+      var answer = q.getAttribute('data-answer');
+      var feedback = q.querySelector('.feedback');
+      q.querySelectorAll('button').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          q.querySelectorAll('button').forEach(function (b) { b.classList.remove('right', 'wrong'); });
+          if (btn.getAttribute('data-option') === answer) {
+            btn.classList.add('right');
+            feedback.textContent = 'Correct! ✅';
+          } else {
+            btn.classList.add('wrong');
+            feedback.textContent = 'Not quite. Try another one. 🙂';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

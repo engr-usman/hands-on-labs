@@ -1,0 +1,145 @@
+# =============================================================
+# hands-on-labs .gitignore
+# Keeps secrets, local state and generated files out of GitHub.
+# =============================================================
+
+# ---------- Secrets & credentials ----------
+.env
+.env.*
+!.env.example
+!.env.sample
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.csr
+*.ppk
+id_rsa*
+id_ed25519*
+*.keystore
+*.jks
+secrets.*
+*secret*.json
+*secret*.yaml
+*secret*.yml
+!*secret*.example.*
+credentials
+credentials.*
+.netrc
+.htpasswd
+
+# ---------- AWS ----------
+.aws/
+.aws-sam/
+samconfig.toml
+cdk.out/
+cdk.context.json
+*.tfvars.json
+outputs.json
+
+# ---------- Terraform / IaC ----------
+.terraform/
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.tfvars.example
+*.tfplan
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terragrunt-cache/
+.pulumi/
+
+# ---------- Kubernetes / Helm ----------
+kubeconfig
+kubeconfig*
+*.kubeconfig
+.kube/
+charts/*.tgz
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*.so
+.venv/
+venv/
+env/
+.Python
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+instance/
+*.sqlite3
+*.db
+
+# ---------- Node / frontend ----------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.npm/
+.next/
+.nuxt/
+.cache/
+.parcel-cache/
+
+# ---------- Docker ----------
+.docker/
+docker-compose.override.yml
+
+# ---------- Logs & temp ----------
+logs/
+*.log
+tmp/
+temp/
+*.tmp
+*.bak
+*.swp
+*.swo
+*~
+
+# ---------- Archives & large binaries ----------
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# ---------- OS files ----------
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ---------- Editors / IDEs ----------
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.iml
+*.sublime-project
+*.sublime-workspace
+.history/
+
+# ---------- AI assistants (local settings) ----------
+.claude/settings.local.json
